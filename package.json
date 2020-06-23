@@ -1,0 +1,19 @@
+{
+  "name": "background-generator",
+  "version": "1.0.0",
+  "description": "To get a gradient background color code for your project",
+  "main": "script.js",
+  "scripts": {
+    "build": "browserify script.js > bundle.js && live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Manipandian/Background-Generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Manipandian/Background-Generator/issues"
+  },
+  "homepage": "https://github.com/Manipandian/Background-Generator#readme"
+}

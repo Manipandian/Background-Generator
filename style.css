@@ -8,6 +8,15 @@ body {
 	background: linear-gradient(to right, #00ff00 , #ff0000);
 }
 
+ input {
+    width: 20em;
+    height: 5em;
+} 
+.color-data {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
 h1 {
     font: 600 3.5em 'Raleway', sans-serif;
     color: rgba(0,0,0,.5);
@@ -37,4 +46,8 @@ h3 {
 #random:hover {
     /* background-color: aquamarine; */
     box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+}
+
+td {
+    text-align: left;
 }

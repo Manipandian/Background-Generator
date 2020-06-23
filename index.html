@@ -1,16 +1,56 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>Gradient Background</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body id="gradient">
-	<h1>Cool Background Gradient Generator</h1>
-	<input class="color1" type="color" name="color1" value="#00ff00">
-	<input class="color2" type="color" name="color2" value="#ff0000">
-	<h2>Current CSS Background</h2>
-	<h3></h3>
-	<button id="random">Randon Color</button>
-	<script type="text/javascript" src="script.js"></script>
-</body>
+	<meta name="keywords" content="Background color, Gradient color, Gradient for background" />
+    <meta name="description" content="Color picker | Gradient color background | color converter | rgd to hex" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body id="gradient">
+    <h1>Cool Background Gradient Generator</h1>
+    <div class="color-data">
+      <div>
+        <input class="color1" type="color" name="color1" value="#00ff00" />
+        <table style="margin: 3em;">
+          <tr>
+            <td>HEX COLOR:</td>
+            <td>
+              <span><strong id="hex1">#ffffff</strong></span>
+            </td>
+          </tr>
+
+          <tr>
+            <td>RGB COLOR:</td>
+            <td>
+              <span><strong id="rgb1">rgb(255,255,255)</strong></span>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <input class="color2" type="color" name="color2" value="#ff0000" />
+		<table style="margin: 3em;">
+			<tr>
+			  <td>HEX COLOR:</td>
+			  <td>
+				<span><strong id="hex2">#ffffff</strong></span>
+			  </td>
+			</tr>
+  
+			<tr>
+			  <td>RGB COLOR:</td>
+			  <td>
+				<span><strong id="rgb2">rgb(255,255,255)</strong></span>
+			  </td>
+			</tr>
+		  </table>
+      </div>
+    </div>
+    <h2>Current CSS Background</h2>
+    <h3></h3>
+    <button id="random">Randon Color</button>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
 </html>
