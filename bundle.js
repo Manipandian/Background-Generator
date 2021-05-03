@@ -2,8 +2,12 @@
 var css = document.querySelector("h3");
 var color1 = document.querySelector(".color1");
 var color2 = document.querySelector(".color2");
-var body = document.getElementById("gradient");
-var randomButton = document.getElementById("random")
+var body = document.getElementById('gradient');
+var randomButton = document.getElementById("random");
+let rgb1 = document.getElementById("rgb1");
+let hex1 = document.getElementById("hex1");
+let rgb2 = document.getElementById("rgb2");
+let hex2 = document.getElementById("hex2");
 css.textContent = "linear-gradient(to right, #00ff00 , #ff0000)";
 
 
@@ -48,8 +52,12 @@ function setGradient() {
 	+ ", " 
 	+ color2.value 
 	+ ")";
-
 	css.textContent = body.style.background + ";";
+	hex1.textContent = color1.value;
+	hex2.textContent = color2.value;
+	rgb1.textContent = convertColorType(color1.value);
+	rgb2.textContent = convertColorType(color2.value);
+
 }
 
 color1.addEventListener("input", setGradient);
@@ -57,15 +65,17 @@ color1.addEventListener("input", setGradient);
 color2.addEventListener("input", setGradient);
 
 randomButton.addEventListener("click", function() {
-	let randomColor1 = "rgb(" + (Math.random() * 255) + ","
-	+ (Math.random() * 255) + ","
-	+ (Math.random() * 255) 
+	let randomColor1 = "rgb(" + parseInt(Math.random() * 255) + ","
+	+ parseInt(Math.random() * 255) + ","
+	+ parseInt(Math.random() * 255) 
 	+")";
-	let randomColor2 = "rgb(" + (Math.random() * 255)  + ","
-	+ (Math.random() * 255) +","
-	+ (Math.random() * 255) +")";
-	color1.value = convertColorType(randomColor1);
-	color2.value = convertColorType(randomColor2);
+	let randomColor2 = "rgb(" + parseInt(Math.random() * 255)  + ","
+	+ parseInt(Math.random() * 255) +","
+	+ parseInt(Math.random() * 255) +")";
+	rgb1.textContent = randomColor1;
+	rgb2.textContent = randomColor2;
+	hex1.textContent = color1.value = convertColorType(randomColor1);
+	hex2.textContent = color2.value = convertColorType(randomColor2);
 	body.style.background = "linear-gradient(to right, " + 
 	randomColor1 + "," + randomColor2 +")";
 	css.textContent = body.style.background + ";";
